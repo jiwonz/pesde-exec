@@ -41,7 +41,7 @@ return function(
 		}
 		else nil
 	local ok, result = pcall(process.spawn, peerDependencyProgram, params, options)
-	if ok and (result and result.ok and result.stderr == "") then -- remove stderr check after pesde 0.6
+	if ok and (result and result.ok and result.stderr:find("` not found. are you in the right directory?") ~= nil) then -- bruh. remove stderr check after pesde 0.6
 		return result
 	end
 
