@@ -55,9 +55,10 @@ return function(
 			[string]: {
 				name: string?,
 				version: string?,
-			}?
-		}?
-	} = serde.decode("toml", pesdeToml:readFile())
+			}?,
+		}?,
+	} =
+		serde.decode("toml", pesdeToml:readFile())
 	if not pesdeToml.peer_dependencies then
 		error("peer dependencies not found in pesde.toml")
 	end
