@@ -1,0 +1,22 @@
+name = "jiwonz/pesde_exec"
+version = "0.1.0"
+description = "pesde x + process.exec"
+authors = ["jiwonz <me@jiwonz.kr>"]
+repository = "https://github.com/jiwonz/pesde-exec"
+license = "MIT"
+includes = ["init.luau", "LICENSE", "pesde.toml", "README.md"]
+
+[target]
+environment = "lune"
+lib = "init.luau"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies]
+selene = { name = "pesde/selene", version = "^0.28.0" }
+luau_lsp = { name = "pesde/luau_lsp", version = "^1.38.1" }
+stylua = { name = "pesde/stylua", version = "^2.0.2" }
+
+[dependencies]
+greentea = { name = "corecii/greentea", version = "^0.4.11" }
