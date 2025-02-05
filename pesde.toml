@@ -1,5 +1,5 @@
 name = "jiwonz/pesde_exec"
-version = "0.3.0"
+version = "0.3.1"
 description = "pesde x + process.exec"
 authors = ["jiwonz <me@jiwonz.kr>"]
 repository = "https://github.com/jiwonz/pesde-exec"
@@ -20,4 +20,4 @@ stylua = { name = "pesde/stylua", version = "^2.0.2" }
 
 [dependencies]
 greentea = { name = "corecii/greentea", version = "^0.4.11" }
-pathfs = { name = "jiwonz/pathfs", version = "^0.5.0" }
+pathfs = { name = "jiwonz/pathfs", version = "^0.5.1" }
