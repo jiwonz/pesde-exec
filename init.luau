@@ -7,6 +7,11 @@ local stringType = gt.build(gt.string())
 local optionalStringArrayType = gt.build(gt.opt(gt.array(gt.string())))
 local optionalBooleanType = gt.build(gt.opt(gt.boolean()))
 
+local PESDE_ROOT: string? = _G.PESDE_ROOT
+if not PESDE_ROOT then
+	error("PESDE_ROOT not found. Are you running through pesde?")
+end
+
 --[=[
 	Spawns a child process that will run the program `program`, and returns a dictionary that describes the final status and ouput of the child process.
 
@@ -21,7 +26,6 @@ local optionalBooleanType = gt.build(gt.opt(gt.boolean()))
 	@return A dictionary representing the result of the child process
 ]=]
 return function(
-	pesdeTomlPath: typeof(pathfs.types.AsPath:type()),
 	peerDependencyProgram: typeof(stringType:type()),
 	params: typeof(optionalStringArrayType:type()),
 	inherit: typeof(optionalBooleanType:type())
@@ -41,7 +45,7 @@ return function(
 		return result
 	end
 
-	local pesdeToml = pathfs.findFile(pathfs.Path.from(pesdeTomlPath))
+	local pesdeToml = pathfs.findFile(pathfs.Path.from(PESDE_ROOT):join("pesde.toml"))
 	if not pesdeToml then
 		error("pesde.toml not found")
 	end
