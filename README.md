@@ -7,8 +7,7 @@ local pesdeExec = require("../")
 
 local result = pesdeExec(
 	"darklua",
-	{"--version"},
-	false
+	{"--version"}
 )
 
 print("result:", result)

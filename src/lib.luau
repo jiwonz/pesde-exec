@@ -34,7 +34,7 @@ local optionalOptionsType = gt.build(gt.opt(gt.anyTable()))
 	```
 	#### `example.luau`
 	```lua
-	local result = spawn("darklua", {"arg1", "arg2"}, {})
+	local result = pesdeExec("darklua", {"arg1", "arg2"})
 	```
 ]=]
 return function(
