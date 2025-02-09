@@ -11,7 +11,7 @@ if not PESDE_ROOT then
 	error("PESDE_ROOT not found. Are you running through pesde?")
 end
 
-local optionalOptionsType = gt.build(gt.opt(gt.anyTable()))
+local optionalOptionsType = gt.build(gt.opt(gt.anyTable() :: process.SpawnOptions))
 
 --[=[
 	Spawns a child process that will run the program `program`, and returns a dictionary that describes the final status and ouput of the child process.

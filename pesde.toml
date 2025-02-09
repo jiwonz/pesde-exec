@@ -1,5 +1,5 @@
 name = "jiwonz/pesde_exec"
-version = "0.4.1"
+version = "0.4.2"
 description = "pesde x + process.exec"
 authors = ["jiwonz <me@jiwonz.kr>"]
 repository = "https://github.com/jiwonz/pesde-exec"
